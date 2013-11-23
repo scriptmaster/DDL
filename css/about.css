@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+#menu_head{
+	border-bottom:6px solid #8b9413;
+}
+#menu_head h1{
+	font-size:24px;
+	color:#444444;
+	text-shadow:none;
+	font-family:"Berthold City";
+}
+#menu_head a{
+	background:#d7df22;
+	border:2px solid #d7df22;
+	margin-top:10px;
+}
+#tab_one p{
+	text-align:center;
+	margin:0;
+	font-family:"Berthold City";
+	text-decoration:none;
+}
+#tab_one a p{
+	text-decoration:none;
+	font-size:16px;
+	color:#00595a;
+	text-shadow:none;
+}
+#tab_two p{
+	text-align:center;
+	margin:0;
+	font-family:"Berthold City";
+	text-decoration:none;
+}
+#tab_two a p{
+	text-decoration:none;
+	color:#7a0046;
+	font-size:16px;
+	text-shadow:none;
+}
+#tab_on{
+	text-align:center;
+	font-family:"Berthold City";
+	padding-top:4px;
+}
+#tab_on a{
+	text-decoration:none;
+	cursor:default;
+	font-size:16px;
+	color:#00595a;
+	text-shadow:none;
+}
+#tab_to{
+	text-align:center;
+	font-family:"Berthold City";
+	padding-top:4px;
+}
+#tab_to a{
+	text-decoration:none;
+	cursor:default;
+	color:#7a0046;
+	font-size:16px;
+	text-shadow:none;
+}
+#abt_content{
+	background:#231f20; 
+	color:#FFF;
+}
+
+#abt_content h2{
+	 color:#d7df22;
+	 font-size:18px;
+	 text-shadow:none;
+	 font-family:"Berthold City";
+ }
+
+#abt_content p{
+	text-shadow:none;
+	font-size:16px;
+	line-height:23px;
+	font-family:"Bliss";
+	
+}
+/**/
+#about_content{
+	background:#231f20; 
+	color:#FFF;
+}
+
+#about_content h2{
+	 color:#d7df22;
+	 font-size:18px;
+	 text-shadow:none;
+	 font-family:"Berthold City";
+ }
+
+#about_content p{
+	text-shadow:none;
+	font-size:16px;
+	line-height:20px;
+	font-family:"Bliss";
+	
+}
+#contact_send{
+	
+	background:#d7df22;
+	border:2px solid #d7df22;
+	
+}
+
+/*facts paragraph*/
+
+#facts_text{
+	color:#FFF;
+	font-family:"Bliss";
+	text-shadow:none;
+}

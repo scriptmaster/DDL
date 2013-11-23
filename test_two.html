@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Videos</title>	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="build/jquery.player-1.3.2.min.css" />
+	<script src="build/jquery-1.9.1.min.js"></script>
+	<script src="build/jquery.mobile-1.3.2.min.js"></script>
+	<script src="build/jquery.js"></script>	
+	<script src="build/mediaelement-and-player.min.js"></script>
+	<!--<script src="testforfiles.js"></script>-->	
+	
+</head>
+<body style="background:#000;">
+
+
+
+<div data-role="page">
+
+<div id="menu_head" data-role="header" data-theme="e" data-position="fixed">
+		<a href="index.html"  data-role="button" data-icon="arrow-l" data-iconpos="notext">back</a>
+        <h1>PLAYER</h1>
+	</div><!-- /header -->
+
+<video width="100%" height="500" id="player2" poster="" controls preload="none">
+	<!-- MP4 source must come first for iOS -->
+	<source type="video/mp4" src="media/Ole test.mp4.mp4" />
+	<!-- WebM for Firefox 4 and Opera -->
+	<source type="video/webm" src="media/Ole test.webm" />
+	<!-- OGG for Firefox 3 -->
+	<source type="video/ogg" src="media/Ole test.ogv" />
+	<!-- Fallback flash player for no-HTML5 browsers with JavaScript turned off -->
+	<object width="640" height="360" type="application/x-shockwave-flash" data="build/flashmediaelement.swf"> 		
+		<param name="movie" value="build/flashmediaelement.swf" /> 
+		<param name="flashvars" value="controls=true&amp;file=media/Alida test.mp4" /> 		
+		<!-- Image fall back for non-HTML5 browser with JavaScript turned off and no Flash player installed -->
+		<img src="" width="100%" height="500" alt="Here we are" 
+			title="No video playback capabilities" />
+	</object> 	
+</video>
+
+
+</div>
+
+
+
+
+<!---->
+<script>
+
+$('audio,video').mediaelementplayer({
+	success: function(player, node) {
+		$('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+	}
+});
+
+</script>
+
+
+</body>
+</html>

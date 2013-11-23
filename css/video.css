@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face
+{
+font-family: "Berthold City";
+font-weight:normal;
+src:url(fonts/City-Medium.ttf);
+} 
+@font-face
+{
+font-family: "Bliss";
+font-weight:normal;
+src:url(fonts/ufonts.com_bliss_regular_1_.ttf); 
+} 
+
+#menu_head h1{
+	font-size:24px;
+	color:#444444;
+	text-shadow:none;
+	font-family:"Berthold City";
+}
+#menu_head{
+	border-bottom:6px solid #8b9413;
+}
+#vi_content{
+	
+	background:#231f20; 
+	text-shadow:none; 
+	color:#d7df22;
+	margin-top:-21px;
+	font-family:"Berthold City";
+}
+#vi_list{
+	background:#141212;
+	 color:#FFF;
+	 /* border:2px solid #141212;*/
+	 border:1px solid #231f20;
+	 text-shadow:none;
+	
+	   
+	
+}
+#vi_list h2{
+	color:#d7df22;
+	 font-size:14px;
+	 font-family:"Berthold City";
+}
+
+#vi_list p{
+	color:#FFF;
+	font-size:14px;
+	font-family:"Bliss";
+}
+
