@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	
@@ -10,10 +10,20 @@
 	<script src="build/jquery.mobile-1.3.2.min.js"></script>
 	<script src="build/jquery.js"></script>	
 	<script src="build/mediaelement-and-player.min.js"></script>
+     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 	<!--<script src="testforfiles.js"></script>-->	
-	
+	<script>
+	function getvid(){
+ 	var a=window.location.href.split('#')[1].split('&'),
+ 	id=a[0].split('id=')[1],
+ 	name=a[1].split('name=')[1];
+ 	alert(name);
+	var ft= document.getElementById('player2');
+	ft.src=name;
+	}
+	</script>
 </head>
-<body style="background:#000;">
+<body style="background:#000;" onLoad="getvid()">
 
 
 
@@ -26,11 +36,7 @@
 
 <video width="100%" height="500" id="player2" poster="" controls preload="none">
 	<!-- MP4 source must come first for iOS -->
-	<source type="video/mp4" src="media/Alida test.mp4.mp4" />
-	<!-- WebM for Firefox 4 and Opera -->
-	<source type="video/webm" src="media/Alida test.webm" />
-	<!-- OGG for Firefox 3 -->
-	<source type="video/ogg" src="media/Alida test.ogv" />
+	<source type="video/mp4" src="media/test.mp4" />
 	<!-- Fallback flash player for no-HTML5 browsers with JavaScript turned off -->
 	<object width="640" height="360" type="application/x-shockwave-flash" data="build/flashmediaelement.swf"> 		
 		<param name="movie" value="build/flashmediaelement.swf" /> 
