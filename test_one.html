@@ -11,17 +11,6 @@
 	<script src="build/jquery.js"></script>	
 	<script src="build/mediaelement-and-player.min.js"></script>
      <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-	<!--<script src="testforfiles.js"></script>-->	
-	<script>
-	function getvid(){
- 	var a=window.location.href.split('#')[1].split('&'),
- 	id=a[0].split('id=')[1],
- 	name=a[1].split('name=')[1];
- 	alert(name);
-	var ft= document.getElementById('player2');
-	ft.src=name;
-	}
-	</script>
 </head>
 <body style="background:#000;" onLoad="getvid()">
 
