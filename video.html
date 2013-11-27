@@ -9,10 +9,100 @@
 	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/jquery.mobile-1.3.2.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    
+    <script type="text/javascript">
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady(){
+        
+        window.requestFileSystem(
+         LocalFileSystem.PERSISTENT, 0, 
+         function onFileSystemSuccess(fileSystem) {
+             window.currentDir = fileSystem.root.fullPath;
+             window.fileSystem = fileSystem;
+         }, fail);
+
+    }
+
+    function existsFile(fileName,dwdURL){
+        
+        fileSystem.root.getFile(fileName, {
+            
+            
+            }, 
+            function(f){
+                
+                console.log(f);
+                 alert("file founded: " + f.toURI());
+                  showLink(f.toURI());
+            },
+            function(){
+                window.confirm("would you like to download..?");
+                    downloadFile(fileName,dwdURL);
+            
+            })
+
+    }
+
+    function downloadFile(fileName,dwdURL) {
+        var fileTransfer = new FileTransfer();
+        
+        fileTransfer.download(dwdURL, 
+        currentDir+"/"+fileName,
+           function(theFile) {
+               alert("download complete: " + theFile.toURI());
+               showLink(theFile.toURI());
+           },
+           function(error) {
+            alert("download error source " + error.source);
+            alert("download error target " + error.target);
+            alert("upload error code: " + error.code);
+           });
+    }
+ 
+    function showLink(url){
+        
+        alert(url);
+        
+        //var ft=document.getElementById('playVideo');
+        
+        //ft.src=url;
+        
+        $(document).ready(function(){
+                
+                $("#pg_one").hide();
+                
+                $("#pg_two").show();
+                
+        });
+       
+ 
+    }
+     
+ 
+    function fail(evt) {
+        console.log(evt.target.error.code);
+    }
+    
+    $(document).ready(function(){
+            
+            $("#pg_two").hide();
+            
+            $("#b2p").click(function(){
+            
+            $("#pg_two").hide();
+            $("#pg_one").show();
+                    
+            });
+    })
+  </script>
+    
+   
 </head>
 <body>
 
-<div data-role="page">
+<div data-role="page" id="pg_one">
 
 	<div id="menu_head" data-role="header" data-theme="e" data-position="fixed">
 		<a href="index.html"  data-role="button" data-icon="arrow-l" data-iconpos="notext">back</a>
@@ -203,5 +293,10 @@
 	
 </div><!-- /page -->
 
+
+<div id="pg_two">
+	
+	<a href="#" id="b2p">back</a>
+</div>
 </body>
 </html>
