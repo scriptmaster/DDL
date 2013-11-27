@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.wiredelta.ddl" version="0.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.wiredelta.ddl" version="0.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>DDL</name>
     <description>
         DDL App
@@ -9,13 +9,13 @@
     </author>
     
     <feature name="http://api.phonegap.com/1.0/device" />
-    <!--feature name="http://api.phonegap.com/1.0/geolocation"/-->
+    <feature name="http://api.phonegap.com/1.0/file"/>
     
     <feature name="SplashScreen">
         <param name="android-package" value="org.apache.cordova.SplashScreen" />
         <param name="ios-package" value="CDVSplashScreen" />
-    </feature>	
-	
+    </feature>        
+
 	<feature name="File">
 		<param name="android-package" value="org.apache.cordova.FileUtils" />
 		<param name="ios-package" value="CDVFile" />
@@ -25,6 +25,7 @@
 		<param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
 		<param name="ios-package" value="CDVFileTransfer" />
 	</feature>
+
     <!--feature name="Geolocation">
       <param name="android-package" value="org.apache.cordova.GeoBroker" />
     </feature-->
@@ -35,7 +36,8 @@
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
-    <preference name="webviewbounce" value="true" />
+	<preference name="DisallowOverscroll" value="true" />
+     <preference name="webviewbounce" value="false" />
     <preference name="stay-in-webview" value="false" />
     <preference name="prerendered-icon" value="true" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
@@ -48,10 +50,12 @@
     <preference name="show-splash-screen-spinner" value="false" />
 
 
-	<!--gap:splash gap:platform="ios" height="480" src="res/screen/ios/screen-hdpi-landscape.png" width="800" />
-	<gap:splash gap:platform="ios" height="800"  src="res/screen/ios/screen-hdpi-portrait.png" width="480" />
-	<gap:splash gap:platform="ios" height="720" src="res/screen/ios/screen-xhdpi-landscape.png" width="1280" />
-	<gap:splash gap:platform="ios" height="1280" src="res/screen/iosscreen-xhdpi-portrait.png" width="720" /-->
+
+
+        <!--gap:splash gap:platform="ios" height="480" src="res/screen/ios/screen-hdpi-landscape.png" width="800" />
+        <gap:splash gap:platform="ios" height="800"  src="res/screen/ios/screen-hdpi-portrait.png" width="480" />
+        <gap:splash gap:platform="ios" height="720" src="res/screen/ios/screen-xhdpi-landscape.png" width="1280" />
+        <gap:splash gap:platform="ios" height="1280" src="res/screen/iosscreen-xhdpi-portrait.png" width="720" /-->
 
     <icon src="icon.png" />
     <access origin="*" />
