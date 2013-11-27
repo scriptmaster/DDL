@@ -92,6 +92,13 @@
 	            
 	            $("#pg_two").hide();
 	            
+	            $("#playv").click(function(){
+	            
+	            $("#pg_two").show();
+	            $("#pg_one").hide();
+	                    
+	            });
+	            
 	            $("#b2p").click(function(){
 	            
 	            $("#pg_two").hide();
@@ -118,7 +125,7 @@
 <body >
 
 
-<div data-role="page" style="background:#2e2e2c;" data-fullscreen="true">
+<div data-role="page" style="background:#2e2e2c;" data-fullscreen="true" id="pg_one">
 
 	<div id="menu_head" data-role="header" data-theme="e" data-position="fixed">
 		
@@ -128,7 +135,7 @@
 	</div><!-- /header -->
     
     <div data-role="fieldcontain" style="text-align:center;" id="home_video">
-       <a href="video.html"  data-role="none">
+       <a href="#" id="playv"  data-role="none">
        <img src="img/home_video.png" alt="test" class="resizeScreen">
         </a>
 	</div>
@@ -209,6 +216,26 @@
 
 </div><!-- /page -->
 
+<div data-role="page" id="pg_two">
+
+        <div id="menu_head" data-role="header" data-theme="e" data-position="fixed">
+        
+                <a href="#"  data-role="button" id="b2p" data-icon="arrow-l" data-iconpos="notext">back</a>
+                
+                <h1>PLAYER</h1>
+                
+        </div><!-- /header -->
+
+<video width="100%" height="500" id="playVideo" controls preload="none">
+        
+        <!-- MP4 source must come first for iOS -->
+        <source type="video/mp4" src="media/test.mp4" />
+       
+               
+</video>
+
+
+</div>
 
 </body>
 </html>
