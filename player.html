@@ -7,7 +7,12 @@
  	<meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!---<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />--->
-        
+        <link rel="stylesheet" href="build/jquery.player-1.3.2.min.css" />
+	<script src="build/jquery-1.9.1.min.js"></script>
+	<script src="build/jquery.mobile-1.3.2.min.js"></script>
+	<script src="build/jquery.js"></script>	
+	<script src="build/mediaelement-and-player.min.js"></script>
+     	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript">
 		function getvid(){
 			
@@ -38,7 +43,7 @@
 <div data-role="page">
 
 <div id="menu_head" data-role="header" data-theme="e" data-position="fixed">
-		<a href="video.html"  data-role="button" data-icon="arrow-l" data-iconpos="notext">back</a>
+		<a href="index.html"  data-role="button" data-icon="arrow-l" data-iconpos="notext">back</a>
         	<h1>PLAYER</h1>
 	</div><!-- /header -->
 
@@ -54,7 +59,15 @@
 
 </div>
 
+<script>
 
+$('audio,video').mediaelementplayer({
+	success: function(player, node) {
+		$('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+	}
+});
+
+</script>
 
 
 
