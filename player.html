@@ -3,27 +3,31 @@
 <head>
 	
 	<title>Videos</title>	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" href="build/jquery.player-1.3.2.min.css" />
 	
-	<script src="build/jquery-1.9.1.min.js"></script>
-	<script src="build/jquery.mobile-1.3.2.min.js"></script>
-	<script src="build/jquery.js"></script>	
-	<script src="build/mediaelement-and-player.min.js"></script>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
+        
+        <script type="text/javascript">
+		function getvid(){
+			
+	 	var a=window.location.href.split('#')[1].split('&'),
+	 	id=a[0].split('id=')[1],
+	 	name=a[1].split('name=')[1];
+	 	
+	 	alert(name);
+		//var ft= document.getElementById('player2');
+		//ft.src=name;
+		}
+	</script>
+	
+        <script src="js/jquery-1.9.1.min.js"></script>
+        
+        <script src="js/jquery.mobile-1.3.2.min.js"></script>
 	
      	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-	<!--<script src="testforfiles.js"></script>-->	
-	<script>
-	//function getvid(){
- 	//var a=window.location.href.split('#')[1].split('&'),
- 	//id=a[0].split('id=')[1],
- //	name=a[1].split('name=')[1];
- 	//alert(name);
-	//var ft= document.getElementById('player2');
-	//ft.src=name;
-	//}
-	</script>
+
+
 </head>
 <body style="background:#000;" onLoad="getvid()">
 
@@ -42,13 +46,7 @@
 	<source type="video/mp4" src="media/test.mp4" />
 	
 
-	<object width="640" height="360" type="application/x-shockwave-flash" data="build/flashmediaelement.swf"> 		
-		<param name="movie" value="build/flashmediaelement.swf" /> 
-		<param name="flashvars" value="controls=true&amp;file=media/Alida test.mp4" /> 		
-		<!-- Image fall back for non-HTML5 browser with JavaScript turned off and no Flash player installed -->
-		<img src="" width="100%" height="500" alt="Here we are" 
-			title="No video playback capabilities" />
-	</object> 	
+		
 </video>
 
 
