@@ -17,11 +17,11 @@
 	        
 	        window.requestFileSystem(
 	         LocalFileSystem.PERSISTENT, 0, 
-	         function onFileSystemSuccess(fileSystem ,localStorage) {
+	         function onFileSystemSuccess(fileSystem) {
 	             window.currentDir = fileSystem.root.fullPath;
 	             window.fileSystem = fileSystem;
 	             
-	             window.localStorage = localStorage;
+	            
 	         }, fail);
 	
 	    }
@@ -68,7 +68,7 @@
 	    function showLink(url){
 	        
 	        alert(url);
-	       	localStorage.videoURL = url;
+	     
 	       	window.location.href="player.html";
 	         //var ft=document.getElementById('playVideo');
 	        
