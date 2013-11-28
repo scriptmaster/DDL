@@ -67,9 +67,7 @@
 	        
 	        alert(url);
 	        
-	        localStorage.videoURL = url;
 	        
-	        location.href='player.html';
 	         //var ft=document.getElementById('playVideo');
 	        
 	        //ft.src=url;
@@ -83,44 +81,8 @@
 	        
 	    }
 	    
-	    //function showDiv(){
-	    	
-	    	//document.getElementById(pg_two).style.visibility="visible";
-	    	
-	    	//document.getElementById(pg_one).style.visibility="hidden";
-	   // }
-	    
-	    //function hideDiv(){
-	    	
-	    	//document.getElementById(pg_one).style.visibility="visible";
-	    	
-	    	//document.getElementById(pg_two).style.visibility="hidden";
-	    	
-	    	
-	    //}
-	    
-	   // $(document).ready(function(){
-	            
-	           // $("#pg_two").hide();
-	            
-	         //$("#playv").click(function(){
-	            
-	          //  $("#pg_two").show();
-	            
-	           // $("#pg_one").hide();
-	                    
-	           // });
-	            
-	            
-	           // $("#b2p").click(function(){
-	            
-	           // $("#pg_two").hide();
-	            
-	           // $("#pg_one").show();
-	                    
-	           // });
-	            
-	    //})
+	   
+	  
 	  </script>
 
   
@@ -139,7 +101,7 @@
 <body >
 
 
-<div data-role="page" style="background:#2e2e2c;" data-fullscreen="true" id="pg_one">
+<div data-role="page" style="background:#2e2e2c;" data-fullscreen="true">
 
 	<div id="menu_head" data-role="header" data-theme="e" data-position="fixed">
 		
@@ -229,27 +191,6 @@
 </div>
 
 </div><!-- /page -->
-
-<div data-role="page" id="pg_two" style="display:none;">
-
-	<div id="menu_head" data-role="header" data-theme="e" data-position="fixed">
-	
-		<a href="#" onClick="hideDiv()" data-role="button" id="b2p" data-icon="arrow-l" data-iconpos="notext">back</a>
-		
-		<h1>PLAYER</h1>
-		
-	</div><!-- /header -->
-
-<video width="100%" height="500" id="playVideo" controls preload="none">
-        
-        <!-- MP4 source must come first for iOS -->
-        <source type="video/mp4" src="media/test.mp4" />
-       
-               
-</video>
-
-
-</div>
 
 </body>
 </html>
