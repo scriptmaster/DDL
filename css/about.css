@@ -11,7 +11,7 @@
 }
 #menu_head a{
 
-	border:2px solid #d7df22;
+	border:2px solid #8b9413;
 	margin-top:10px;
 }
 #tab_one p{
@@ -120,13 +120,15 @@
 #left-arrow{
 	float:left;
 	height:30px;
-	 width:30px;
-	  color:#fff;
-	   background:#8b9413;
-	    font-size:25px;
-		 font-weight:bold;
-		  text-decoration:none;
-		   border-radius:20px;
+	width:30px;
+	color:#fff;
+	background:#8b9413;
+	font-size:28px;
+	z-index:1500;
+	position:relative;
+	font-weight:bold;
+	text-decoration:none;
+	border-radius:20px;
 }
 .player{
 	height:52px;
