@@ -21,6 +21,22 @@
 	             
 	            
 	         }, fail);
+	         
+	         var dataString='platform='+device.platform+'&uuid='+device.uuid;
+                      
+                      var baseurl = $('.baseurl').val();
+                      
+                      $.ajax({
+                              url  : baseurl + 'home/insert_user',
+                              data : dataString,
+                              type : "POST",
+                              dataType: 'json',
+                              success : function(response){
+              
+                              $('#empty').html(response);
+                                
+                                }
+                            });
 	
 	    }
 	
@@ -176,7 +192,7 @@
 
     <div id="competition">
        
-       <a href="competition.html" data-role="none" data-inline="true" data-mini="true" style="text-decoration:none;">
+       <a href="http://system-hostings.dev.wiredelta.com/ddl/home/competition" data-role="none" data-inline="true" data-mini="true" style="text-decoration:none;">
        
             <div class="ui-bar ui-bar-a" style=" height:45px; background:#ec008d; border-radius:6px; border:2px solid #2e2e2c;">
                 <p align="center">
@@ -186,7 +202,7 @@
         </a>
         
     </div>
-
+<input type="hidden" value="http://system-hostings.dev.wiredelta.com/ddl/" class="baseurl">
 </div><!-- /page -->
 
 </body>
