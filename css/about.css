@@ -43,21 +43,20 @@
 	font-family:"Berthold City";
 	padding-top:4px;
 }
-#tab_on a{
+a #tab_on{
 	text-decoration:none;
-	cursor:default;
 	font-size:16px;
 	color:#00595a;
 	text-shadow:none;
 }
 #tab_to{
 	text-align:center;
+	text-decoration:none;
 	font-family:"Berthold City";
 	padding-top:4px;
 }
-#tab_to a{
+a #tab_to {
 	text-decoration:none;
-	cursor:default;
 	color:#7a0046;
 	font-size:16px;
 	text-shadow:none;
@@ -134,4 +133,8 @@
 }
 .player h1{
 	margin-top:12px;
+}
+.ui-block-b{
+
+	text-decoration: none;
 }
