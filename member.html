@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact us</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.mobile-1.3.2.min.js"></script>
+   <!-- <script src="js/validate.js"></script>-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+</head>
+<body>
+
+<div data-role="page" style="background:#231f20;">
+
+	<div id="menu_head" data-role="header" data-theme="e" data-position="fixed">
+    <a href="contact_us.html"  data-role="none"><img src="img/pull-left.png"/></a>
+		<h1>MEMBER</h1>
+	</div><!-- /header -->
+
+	
+
+<div data-role="content" style="background:#231f20; color:#000; margin-top:-20px;">
+	
+    <div data-role="none" align="center">
+    <p id="contact_text">How to become a member</p>
+    </div>
+
+    <form>
+         
+         <input  name="name" id="fname"  type="text" placeholder="Name">
+         <input  name="email" id="mail" type="email" placeholder="E-Mail" >
+         <textarea name="details" id="details" cols="40" rows="8" style="min-height:140px;" placeholder="Details"></textarea>
+         <p>
+         <a href="#" data-role="button" data-theme="e" data-inline="true" name="contact_send" id="contact_send" onClick="memberForm()">
+         Become a member
+         </a>
+         <label for="contact_send" id="mailstatus"></label>
+         </p>
+         
+    </form>
+
+</div>
+     
+	
+</div><!-- /page -->
+
+</body>
+</html>
