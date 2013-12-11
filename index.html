@@ -39,19 +39,6 @@
                                 }
                             });
                     
-                    //video page
-                    
-                    $.get('http://system-hostings.dev.wiredelta.com/ddl/home/video', function(html){
-                    	var vi_content = $('#vi_content', html).html();
-                    	localStorage.vi_content = vi_content;
-                    	$('#vi_content').html(vi_content);
-                    	})
-                    	.error(function(){
-                    		if(localStorage.vi_content){
-                    			$('#vi_content').html(localStorage.vi_content);
-                    		}
-                    		});        
-                 
 	
 	    }
 	
