@@ -2,7 +2,21 @@
 <html>
 <head>
 	<title>Videos</title>
-
+	<script>
+		$(document).ready(function(){
+			
+			$.get('http://system-hostings.dev.wiredelta.com/ddl/home/video', function(html){
+                            var vi_content = $('#vi_content', html).html();
+                            localStorage.vi_content = vi_content;
+                            $('#vi_content').html(vi_content);
+                            })
+                            .error(function(){
+                                    if(localStorage.vi_content){
+                                            $('#vi_content').html(localStorage.vi_content);
+                                    }
+                                    })     
+			});
+	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
@@ -10,7 +24,7 @@
 	<script src="js/jquery-1.9.1.min.js"></script>
 	
 	<script src="js/jquery.mobile-1.3.2.min.js"></script>
-    
+    	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 </head>
 
 <body>
