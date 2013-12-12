@@ -3,7 +3,11 @@
 <head>
 	<title>Videos</title>
 	<script>
-		$(document).ready(function(){
+	document.addEventListener("deviceready", onDeviceReady, false);
+	
+		function onDeviceReady(){
+			
+			alert("video list"); 
 			
 			$.get('http://system-hostings.dev.wiredelta.com/ddl/home/video', function(html){
                             var vi_content = $('#vi_content', html).html();
@@ -14,8 +18,8 @@
                                     if(localStorage.vi_content){
                                             $('#vi_content').html(localStorage.vi_content);
                                     }
-                                    })     
-			});
+                                    });     
+			}
 	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
