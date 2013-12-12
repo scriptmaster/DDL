@@ -3,11 +3,14 @@
 <head>
 	<title>Videos</title>
 	<script>
+	
+		alert("video list"); 
+		
 	document.addEventListener("deviceready", onDeviceReady, false);
 	
 		function onDeviceReady(){
 			
-			alert("video list"); 
+		
 			
 			$.get('http://system-hostings.dev.wiredelta.com/ddl/home/video', function(html){
                             var vi_content = $('#vi_content', html).html();
