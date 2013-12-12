@@ -69,9 +69,10 @@
 	 
 	    function showLink(url){
 	    	// var href="player.html#id=5"+"&name="+url;
-	    	var href="player.html#id=5"+"&name="+url;
+	    	// var href="player.html#id=5"+"&name="+url;
 	       	// window.location.href=href;
-	       	$.mobile.changePage(href);
+	       	localStorage.video_url = url;
+	       	$.mobile.changePage('player.html');
 	        //var ft=document.getElementById('playVideo');
 	        //ft.src=url;
 	    }
