@@ -41,63 +41,43 @@
 	
 	    }
 	
-	    function existsFile(fileName,dwdURL){
-	        
-	        fileSystem.root.getFile(fileName, {
-	            
-	            
-	            }, 
-	            function(f){
-	              
-	                // alert("file founded: " + f.toURI());
-	                 
+	    function existsFile(fileName, dwdURL) {
+	        fileSystem.root.getFile(fileName, {},
+	            function(f) {
 	                  showLink(f.toURI());
 	            },
 	            function(){
-	                window.confirm("Please download video in order to watch");
-	                
 	                    downloadFile(fileName,dwdURL);
-	            
-	            })
+	            }
+	        );
 	
 	    }
 	
 	    function downloadFile(fileName,dwdURL) {
-	    	
-	    
 	        var fileTransfer = new FileTransfer();
 	        
 	        fileTransfer.download(dwdURL, 
 	        currentDir+"/"+fileName,
 	           function(theFile) {
-	               alert("download complete: " + theFile.toURI());
 	               showLink(theFile.toURI());
 	           },
 	           function(error) {
-	            alert("download error source " + error.source);
-	            alert("download error target " + error.target);
-	            alert("upload error code: " + error.code);
+	            alert("Cannot download video.  No/bad internet connection?");
+	            console.log(error);
 	           });
 	    }
 	 
 	    function showLink(url){
-	     
-	       	window.location.href="player.html#id=5"+"&name="+url;
-	         //var ft=document.getElementById('playVideo');
-	        
+	    	var href="player.html#id=5"+"&name="+url;
+	       	// window.location.href=href;
+	       	$.mobile.loadPage(href);
+	        //var ft=document.getElementById('playVideo');
 	        //ft.src=url;
-	 
 	    }
-	     
-	 
+
 	    function fail(evt) {
-	    	
 	        console.log(evt.target.error.code);
-	        
 	    }
-	    
-	   
-	  
 	  </script>
 
   
