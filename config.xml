@@ -52,7 +52,7 @@
 
 
 
-        <!--gap:splash gap:platform="ios" height="480" src="res/screen/ios/screen-320x480.png" width="320" />
+        <gap:splash gap:platform="ios" height="480" src="res/screen/ios/screen-320x480.png" width="320" />
         <gap:splash gap:platform="ios" height="640"  src="res/screen/ios/screen-640x960.png" width="960" />
         <gap:splash gap:platform="ios" height="640" src="res/screen/ios/screen-640x1136.png" width="1136" />
         <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-768x1024.png" width="1024" />
@@ -64,7 +64,7 @@
 	<icon src="icon/ios/classic.png" gap:platform="ios" width="57" height="57" />
 	<icon src="icon/ios/ipad.png" gap:platform="ios" width="72" height="72" />
 	<icon src="icon/ios/retina.png" gap:platform="ios" width="114" height="114" />
-	<icon src="icon/ios/retina_ipad.png" gap:platform="ios" width="144" height="144" /-->
+	<icon src="icon/ios/retina_ipad.png" gap:platform="ios" width="144" height="144" />
 
     <icon src="icon.png" />
     <access origin="*" />
