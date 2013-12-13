@@ -121,7 +121,12 @@ a #tab_to {
 	font-family:"Bliss";
 	text-shadow:none;
 }
-
+#dan_text h2{
+	 color:#d7df22;
+	 font-size:18px;
+	 text-shadow:none;
+	 font-family:"Berthold City";
+	}
 /*player*/
 #left-arrow{
 	float:left;
