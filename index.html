@@ -62,7 +62,8 @@
 	               showLink(theFile.toURI());
 	           },
 	           function(error) {
-	            alert("Cannot download video.  No/bad internet connection?");
+	            // alert("Cannot download video.  No/bad internet connection?");
+	            navigator.notification.alert("Cannot download video.  No/bad internet connection?", null, 'Video', 'OK');
 	            console.log(error);
 	           });
 	    }
