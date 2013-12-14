@@ -2,7 +2,7 @@
 <widget id="com.wiredelta.ddl" version="0.2.7" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Slip Fordommene</name>
     <description>
-        Slip Fordommene
+        Træningsapp til folk med hørelse på arbejdspladser og i dagligdagen med at kommunikere lettere med døve
     </description>
     <author email="contact@wiredelta.com" href="http://wiredelta.com/">
         WireDelta
