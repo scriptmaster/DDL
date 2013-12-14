@@ -18,8 +18,6 @@
 	         function onFileSystemSuccess(fileSystem) {
 	             window.currentDir = fileSystem.root.fullPath;
 	             window.fileSystem = fileSystem;
-	             
-	            
 	         }, fail);
 	         
 	         var dataString='platform='+device.platform+'&uuid='+device.uuid;
@@ -161,7 +159,8 @@
     
         <div class="ui-block-b" id="share">
            
-           <a href="share.html"  data-role="none" style="text-decoration:none;">
+           <!-- or share.html -->
+           <a href="http://system-hostings.dev.wiredelta.com/ddl/home/share"  data-role="none" style="text-decoration:none;">
                 <div class="ui-bar ui-bar-c" style="height:52px; border-radius:6px; border:3px solid #2e2e2c;">
                 <p>
                 <img src="img/share.png">
