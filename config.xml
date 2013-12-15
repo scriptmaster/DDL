@@ -49,10 +49,10 @@
     <preference name="android-installLocation" value="auto" />
     <preference name="show-splash-screen-spinner" value="false" />
 
-	<gap:splash gap:density="ldpi" gap:platform="android" src="res/screen/android/ldpi.png" />
-	<gap:splash gap:density="mdpi" gap:platform="android" src="res/screen/android/mdpi.png" />
-	<gap:splash gap:density="hdpi" gap:platform="android" src="res/screen/android/hdpi.png" />
-	<gap:splash gap:density="xhdpi" gap:platform="android" src="res/screen/android/xhdpi.png" />
+	<gap:splash gap:density="ldpi" gap:platform="android" src="res/screen/android/screen-320x426.png" />
+	<gap:splash gap:density="mdpi" gap:platform="android" src="res/screen/android/screen-320x470.png" />
+	<gap:splash gap:density="hdpi" gap:platform="android" src="res/screen/android/screen-480x640.png" />
+	<gap:splash gap:density="xhdpi" gap:platform="android" src="res/screen/android/screen-720x960.png" />
 
 
         <gap:splash gap:platform="ios" height="480" src="res/screen/ios/screen-320x480.png" width="320" />
